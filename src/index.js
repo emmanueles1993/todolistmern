@@ -7,7 +7,7 @@ const { mongoose } = require("./database");
 const app = express();
 
 //Settings
-app.set("port", process.env.PORT || 5000);
+app.set("port", process.env.PORT || 4060);
 
 //Middlewares
 app.use(morgan("dev"));
@@ -23,3 +23,5 @@ app.use(express.static(path.join(__dirname, "public")));
 app.listen(app.get("port"), () => {
   console.log(`server on port ${app.get("port")}`);
 });
+
+
